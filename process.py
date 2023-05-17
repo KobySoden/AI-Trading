@@ -32,8 +32,14 @@ def ask_ai(headline, company_name):
     'Authorization': os.environ["OpenAI-Key"]
     }
 
-    response = requests.request("POST", url, headers=headers, data=payload)
-    response_error_handler(response)
+    while True:
+        response = requests.request("POST", url, headers=headers, data=payload)
+        response_error_handler(response)
+        if response.status_code == 429: #Model is overloaded with requests
+            time.sleep(5)
+            continue
+        else:
+            break
     analysis = json.loads(response.text)["choices"][0]["message"]["content"]
     return analysis
 
