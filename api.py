@@ -3,9 +3,12 @@ from datetime import date
 import json
 import os
 from dotenv import load_dotenv
+import time
 
 #load environment variables
 load_dotenv()
+path = os.path.dirname(os.path.abspath(__file__))
+path = "/home/koby/Desktop/code/AI-Trading"
 
 BASE_URL = "https://yahoo-finance127.p.rapidapi.com"
 
@@ -27,21 +30,27 @@ def get_price(ticker):
 
 def daily_data(ticker):
     #check if data folder exists
-    if not os.path.exists(f"data/{ticker}"):
-        os.makedirs(f"data/{ticker}")
+    if not os.path.exists(f"{path}/data/{ticker}"):
+        os.makedirs(f"{path}/data/{ticker}")
     
     today = date.today()
 
-    with open(f"data/{ticker}/{today.isoformat()}--News.json", "w") as f:
+    with open(f"{path}/data/{ticker}/{today.isoformat()}--News.json", "w") as f:
         f.write(json.dumps(get_news(ticker)))
 
-    with open(f"data/{ticker}/{today.isoformat()}--Price.json", "w") as f:
+    with open(f"{path}/data/{ticker}/{today.isoformat()}--Price.json", "w") as f:
         f.write(json.dumps(get_price(ticker)))
 
 if __name__ == "__main__":
     tickers = ["FIVN","AMZN","META","GOOGL","MSFT","TSLA","AMD","INTC","WMT","CRM","JPM","XOM","CVX","RTX","UNH","JNJ","PFE","NKE","BRK-B","PYPL","CAT"]
 
     for ticker in tickers:
-        daily_data(ticker) # run this once a day
+        try:
+            daily_data(ticker)
+            with open (f"{path}/logs/api.txt", "a") as f:
+                f.write(f"Log: Sucessfully gathered data for {ticker} {time.time()}\n")
+        except:
+            with open (f"{path}/logs/api.txt", "a") as f:
+                f.write(f"Error: Failed to gather data for {ticker} {time.time()}\n")
 
     print(f"Gathered data for {tickers.__len__()} companies")
