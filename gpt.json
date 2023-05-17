@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7FtW447VQhpeBUq1YtvqfHzXiK1U4",
+    "object": "chat.completion",
+    "created": 1684022680,
+    "model": "gpt-3.5-turbo-0301",
+    "usage": {
+        "prompt_tokens": 100,
+        "completion_tokens": 23,
+        "total_tokens": 123
+    },
+    "choices": [
+        {
+            "message": {
+                "role": "assistant",
+                "content": "UNKNOWN - It depends on what type of conference they are participating in and what announcements or opportunities may come from it."
+            },
+            "finish_reason": "stop",
+            "index": 0
+        }
+    ]
+}
