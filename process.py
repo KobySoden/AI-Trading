@@ -7,11 +7,17 @@ from datetime import date
 from dotenv import load_dotenv
 
 load_dotenv()
+path = os.path.dirname(os.path.abspath(__file__))
+path = "/home/koby/Desktop/code/AI-Trading"
+today = date.today()
 
 def response_error_handler(response):
     if response.status_code != 200:
+        with open (f"{path}/logs/process.txt", "a") as f:
+            f.write(f"Error: HTTP Code {response.status_code} - {response.text}\n ----------- \n")
         raise Exception(f"API call failed with status code {response.status_code}")
-
+    return True
+            
 def ask_ai(headline, company_name):
     url = "https://api.openai.com/v1/chat/completions"
     prompt = f"Forget all your previous instructions. Pretend you are a financial expert. You are a financial expert with stock recommendation experience. Answer “YES” if good news, “NO” if bad news, or “UNKNOWN” if uncertain in the first line. Then elaborate with one short and concise sentence on the next line. Is this headline good or bad for the stock price of {company_name} in the term term?\nHeadline: {headline}"
@@ -26,13 +32,16 @@ def ask_ai(headline, company_name):
     'Authorization': os.environ["OpenAI-Key"]
     }
 
-    response = requests.request("POST", url, headers=headers, data=payload)
-    try:
+    while True:
+        response = requests.request("POST", url, headers=headers, data=payload)
         response_error_handler(response)
-        analysis = json.loads(response.text)["choices"][0]["message"]["content"]
-        return analysis
-    except Exception as e:
-        return None
+        if response.status_code == 429: #Model is overloaded with requests
+            time.sleep(5)
+            continue
+        else:
+            break
+    analysis = json.loads(response.text)["choices"][0]["message"]["content"]
+    return analysis
 
 def remove_delims(item):
     item = item.replace("\n"," ")
@@ -74,14 +83,15 @@ def store_analysis(ticker, score, articles_analyzed, headlines, analyses):
     Timestamp,Ticker,Date,Headline,Analysis
     """
     timestamp = time.time()
-    with open(f"data/scores.csv", "a") as f:
+
+    with open(f"{path}/data/scores.csv", "a") as f:
         writer = csv.writer(f)
-        writer.writerow([timestamp,ticker,date.today().isoformat(),score, articles_analyzed])
+        writer.writerow([timestamp,ticker,today.isoformat(),score, articles_analyzed])
         
-    with open(f"data/analyses.csv", "a") as f:
+    with open(f"{path}/data/analyses.csv", "a") as f:
         writer = csv.writer(f)
         for headline in headlines:
-            writer.writerow([timestamp,ticker,date.today().isoformat(),headline, analyses[headlines.index(headline)]])
+            writer.writerow([timestamp,ticker,today.isoformat(),headline, analyses[headlines.index(headline)]])
 
 if __name__ == "__main__":
     ticker_to_company = {"FIVN": "Five9, Inc.",
@@ -106,21 +116,29 @@ if __name__ == "__main__":
     "PYPL": "PayPal Holdings, Inc.",
     "CAT": "Caterpillar Inc."
     }
-
+    with open (f"{path}/logs/process.txt", "a") as f:
+        f.write(f"Log: Starting Script {time.time()}\n")
     #get all the files in the directory
     #for dir in os.listdir("data"):
     for dir in ticker_to_company.keys():
         ticker = dir
         print(f"Analyzing {ticker_to_company[dir]} ...")    
-        for file in os.listdir(f"data/{dir}"):
-            if "News" in file and date.today().isoformat() in file:
+        for file in os.listdir(f"{path}/data/{dir}"):
+            if "News" in file and today.isoformat() in file:
                 print(f"Analyzing {file} ...")
-                with open(f"data/{dir}/{file}", "r") as f:
+                with open(f"{path}/data/{dir}/{file}", "r") as f:
                     news = json.loads(f.read())
                     #print(f"{news.__len__()} articles in {dir}/{file}")
-                    #score, analyses, headlines = analyze_news(news, ticker_to_company[ticker])
-                    #print(f"{file} has a score of {score}")
-                    #store_analysis(ticker, score, news.__len__(),headlines, analyses)
-                    print(f"Stored analysis for {ticker_to_company[ticker]}")
+                    try:
+                        score, analyses, headlines = analyze_news(news, ticker_to_company[ticker])
+                        print(f"{file} has a score of {score}")
+                        store_analysis(ticker, score, news.__len__(),headlines, analyses)
+                        print(f"Stored analysis for {ticker_to_company[ticker]}")
+                        with open (f"{path}/logs/process.txt", "a") as f:
+                            f.write(f"Log: Stored analysis for {ticker_to_company[ticker]} {time.time()}\n")
+                    except:
+                        with open (f"{path}/logs/process.txt", "a") as f:
+                            f.write(f"Error: Failed to analyze {ticker_to_company[ticker]} {time.time()}\n")
+                    
             else:
                 pass
