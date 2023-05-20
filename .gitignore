@@ -1,6 +1,8 @@
 #program generated files
 data/
 logs/
+cron.txt
+testcron.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
