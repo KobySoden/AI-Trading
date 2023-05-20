@@ -1,6 +1,8 @@
 #program generated files
 data/
 logs/
+dataV1/
+logsV2/
 cron.txt
 testcron.py
 

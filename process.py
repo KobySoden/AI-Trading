@@ -94,6 +94,9 @@ def store_analysis(ticker, score, articles_analyzed, headlines, analyses):
             writer.writerow([timestamp,ticker,today.isoformat(),headline, analyses[headlines.index(headline)]])
 
 if __name__ == "__main__":
+    pass
+
+    """
     ticker_to_company = {"FIVN": "Five9, Inc.",
     "AMZN": "Amazon.com Inc.",
     "META": "Meta Platforms Inc. (formerly Facebook Inc.)",
@@ -142,3 +145,5 @@ if __name__ == "__main__":
                     
             else:
                 pass
+                
+                """

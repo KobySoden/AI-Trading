@@ -1,0 +1,239 @@
+Log: Stored analysis for Five9, Inc. 1684339905.893238
+Log: Stored analysis for Amazon.com Inc. 1684339931.8811269
+Log: Stored analysis for Meta Platforms Inc. (formerly Facebook Inc.) 1684339956.4949741
+Log: Stored analysis for Alphabet Inc. (Google) 1684339981.7418687
+Log: Stored analysis for Microsoft Corporation 1684340011.7910295
+Log: Stored analysis for Tesla, Inc. 1684340038.3283508
+Log: Stored analysis for Advanced Micro Devices, Inc. 1684340065.4995983
+Log: Stored analysis for Intel Corporation 1684340092.8005967
+Log: Stored analysis for Walmart Inc. 1684340115.776334
+Log: Stored analysis for Salesforce.com, Inc. 1684340140.4869168
+Log: Stored analysis for JPMorgan Chase & Co. 1684340170.4397082
+Log: Stored analysis for Exxon Mobil Corporation 1684340200.103661
+Log: Stored analysis for Chevron Corporation 1684340231.6071303
+Log: Stored analysis for Raytheon Technologies Corporation 1684340261.9770749
+Log: Stored analysis for UnitedHealth Group Incorporated 1684340285.121879
+Log: Stored analysis for Johnson & Johnson 1684340311.569289
+Log: Stored analysis for Pfizer Inc. 1684340339.4164073
+Log: Stored analysis for Nike, Inc. 1684340365.2182117
+Log: Stored analysis for Berkshire Hathaway Inc. (Class B shares) 1684340390.7156506
+Log: Stored analysis for PayPal Holdings, Inc. 1684340414.0186286
+Log: Stored analysis for Caterpillar Inc. 1684340439.5371456
+Log: Starting Script 1684340507.577316
+Log: Stored analysis for Five9, Inc. 1684340535.2333138
+Log: Stored analysis for Amazon.com Inc. 1684340561.3363423
+Log: Stored analysis for Meta Platforms Inc. (formerly Facebook Inc.) 1684340586.6888733
+Log: Stored analysis for Alphabet Inc. (Google) 1684340614.7467654
+Log: Stored analysis for Microsoft Corporation 1684340639.5479329
+Log: Stored analysis for Tesla, Inc. 1684340667.9009886
+Log: Stored analysis for Advanced Micro Devices, Inc. 1684340695.1393893
+Log: Stored analysis for Intel Corporation 1684340721.841418
+Log: Stored analysis for Walmart Inc. 1684340747.8434947
+Log: Stored analysis for Salesforce.com, Inc. 1684340777.98769
+Log: Stored analysis for JPMorgan Chase & Co. 1684340806.0260067
+Log: Stored analysis for Exxon Mobil Corporation 1684340832.7211075
+Log: Stored analysis for Chevron Corporation 1684340860.5527449
+Log: Stored analysis for Raytheon Technologies Corporation 1684340888.5121055
+Error: HTTP Code 429 - {
+  "error": {
+    "message": "That model is currently overloaded with other requests. You can retry your request, or contact us through our help center at help.openai.com if the error persists. (Please include the request ID 8644206012cf96c5406ff1378793581c in your message.)",
+    "type": "server_error",
+    "param": null,
+    "code": null
+  }
+}
+
+ ----------- 
+Error: Failed to analyze UnitedHealth Group Incorporated 1684340922.3500845
+Log: Stored analysis for Johnson & Johnson 1684340962.70271
+Log: Stored analysis for Pfizer Inc. 1684340991.0966709
+Log: Stored analysis for Nike, Inc. 1684341018.3199816
+Log: Stored analysis for Berkshire Hathaway Inc. (Class B shares) 1684341046.9095967
+Log: Stored analysis for PayPal Holdings, Inc. 1684341074.9968095
+Log: Stored analysis for Caterpillar Inc. 1684341103.9566438
+Log: Starting Script 1684345609.8852875
+Log: Stored analysis for Five9, Inc. 1684345720.8275719
+Log: Stored analysis for Amazon.com Inc. 1684345744.6379728
+Log: Stored analysis for Meta Platforms Inc. (formerly Facebook Inc.) 1684345765.3895938
+Log: Stored analysis for Alphabet Inc. (Google) 1684345786.998407
+Log: Stored analysis for Microsoft Corporation 1684345811.162248
+Log: Stored analysis for Tesla, Inc. 1684345833.37353
+Log: Stored analysis for Advanced Micro Devices, Inc. 1684345857.3018627
+Log: Stored analysis for Intel Corporation 1684345884.186289
+Log: Stored analysis for Walmart Inc. 1684345906.6765244
+Log: Stored analysis for Salesforce.com, Inc. 1684345935.7159235
+Log: Stored analysis for JPMorgan Chase & Co. 1684345963.3870022
+Log: Stored analysis for Exxon Mobil Corporation 1684345992.2705803
+Log: Stored analysis for Chevron Corporation 1684346018.5414808
+Log: Stored analysis for Raytheon Technologies Corporation 1684346047.4727943
+Log: Stored analysis for UnitedHealth Group Incorporated 1684346071.1770525
+Log: Stored analysis for Johnson & Johnson 1684346093.7195823
+Log: Stored analysis for Pfizer Inc. 1684346117.1122105
+Log: Stored analysis for Nike, Inc. 1684346140.0133054
+Log: Stored analysis for Berkshire Hathaway Inc. (Class B shares) 1684346171.8058476
+Log: Stored analysis for PayPal Holdings, Inc. 1684346196.4650145
+Log: Stored analysis for Caterpillar Inc. 1684346228.588102
+Log: Starting Script 1684361680.6912267
+Log: Stored analysis for Five9, Inc. 1684361702.203341
+Error: HTTP Code 502 - {"error":{"code":502,"message":"Bad gateway.","param":null,"type":"cf_bad_gateway"}}
+ ----------- 
+Error: Failed to analyze Amazon.com Inc. 1684362032.1789944
+Error: HTTP Code 429 - {
+  "error": {
+    "message": "That model is currently overloaded with other requests. You can retry your request, or contact us through our help center at help.openai.com if the error persists. (Please include the request ID 584b6cab638839895492ef217320a77b in your message.)",
+    "type": "server_error",
+    "param": null,
+    "code": null
+  }
+}
+
+ ----------- 
+Error: Failed to analyze Meta Platforms Inc. (formerly Facebook Inc.) 1684362062.4269764
+Log: Stored analysis for Alphabet Inc. (Google) 1684362083.2158227
+Log: Stored analysis for Microsoft Corporation 1684362104.247256
+Log: Stored analysis for Tesla, Inc. 1684362124.7746823
+Log: Stored analysis for Advanced Micro Devices, Inc. 1684362145.9456556
+Log: Stored analysis for Intel Corporation 1684362164.5205288
+Log: Stored analysis for Walmart Inc. 1684362184.8930922
+Log: Stored analysis for Salesforce.com, Inc. 1684362204.5215752
+Log: Stored analysis for JPMorgan Chase & Co. 1684362230.1605449
+Error: HTTP Code 429 - {
+  "error": {
+    "message": "That model is currently overloaded with other requests. You can retry your request, or contact us through our help center at help.openai.com if the error persists. (Please include the request ID a12c997306c537894d8d3ebb954aeb0c in your message.)",
+    "type": "server_error",
+    "param": null,
+    "code": null
+  }
+}
+
+ ----------- 
+Error: Failed to analyze Exxon Mobil Corporation 1684362279.4748368
+Log: Stored analysis for Chevron Corporation 1684362299.6913083
+Log: Stored analysis for Raytheon Technologies Corporation 1684362320.4409332
+Log: Stored analysis for UnitedHealth Group Incorporated 1684362340.071505
+Error: HTTP Code 429 - {
+  "error": {
+    "message": "That model is currently overloaded with other requests. You can retry your request, or contact us through our help center at help.openai.com if the error persists. (Please include the request ID 8bf15cd2115765ef1db85cad265016f2 in your message.)",
+    "type": "server_error",
+    "param": null,
+    "code": null
+  }
+}
+
+ ----------- 
+Error: Failed to analyze Johnson & Johnson 1684362377.6121402
+Log: Stored analysis for Pfizer Inc. 1684362402.7251413
+Log: Stored analysis for Nike, Inc. 1684362424.187439
+Error: HTTP Code 429 - {
+  "error": {
+    "message": "That model is currently overloaded with other requests. You can retry your request, or contact us through our help center at help.openai.com if the error persists. (Please include the request ID 949bdfcb3d6f94fff3458522b205f688 in your message.)",
+    "type": "server_error",
+    "param": null,
+    "code": null
+  }
+}
+
+ ----------- 
+Error: Failed to analyze Berkshire Hathaway Inc. (Class B shares) 1684362471.7333703
+Log: Stored analysis for PayPal Holdings, Inc. 1684362490.4918723
+Log: Stored analysis for Caterpillar Inc. 1684362510.9469857
+Log: Starting Script 1684410602.0590055
+Log: Stored analysis for Five9, Inc. 1684410629.9857588
+Log: Stored analysis for Amazon.com Inc. 1684410658.500886
+Log: Stored analysis for Meta Platforms Inc. (formerly Facebook Inc.) 1684410689.8140233
+Log: Stored analysis for Alphabet Inc. (Google) 1684410715.12367
+Log: Stored analysis for Microsoft Corporation 1684410739.9941201
+Error: HTTP Code 429 - {
+  "error": {
+    "message": "That model is currently overloaded with other requests. You can retry your request, or contact us through our help center at help.openai.com if the error persists. (Please include the request ID df9405416486c13f73e1f29ef61f31ef in your message.)",
+    "type": "server_error",
+    "param": null,
+    "code": null
+  }
+}
+
+ ----------- 
+Error: Failed to analyze Tesla, Inc. 1684410770.3793738
+Log: Stored analysis for Advanced Micro Devices, Inc. 1684410798.8118677
+Log: Stored analysis for Intel Corporation 1684410827.7066624
+Log: Stored analysis for Walmart Inc. 1684410853.1875286
+Log: Stored analysis for Salesforce.com, Inc. 1684410881.5998828
+Log: Stored analysis for JPMorgan Chase & Co. 1684410918.4442396
+Log: Stored analysis for Exxon Mobil Corporation 1684410948.151333
+Log: Stored analysis for Chevron Corporation 1684410976.310147
+Log: Stored analysis for Raytheon Technologies Corporation 1684411006.1805122
+Log: Stored analysis for UnitedHealth Group Incorporated 1684411031.2905502
+Log: Stored analysis for Johnson & Johnson 1684411058.9366617
+Log: Stored analysis for Pfizer Inc. 1684411087.2102892
+Log: Stored analysis for Nike, Inc. 1684411110.5693374
+Log: Stored analysis for Berkshire Hathaway Inc. (Class B shares) 1684411140.719695
+Log: Stored analysis for PayPal Holdings, Inc. 1684411165.6818259
+Log: Stored analysis for Caterpillar Inc. 1684411193.0967464
+Log: Starting Script 1684497001.5927837
+Error: Failed to analyze Five9, Inc. 1684497001.5930595
+Error: Failed to analyze Amazon.com Inc. 1684497001.5932317
+Error: Failed to analyze Meta Platforms Inc. (formerly Facebook Inc.) 1684497001.5933957
+Error: Failed to analyze Alphabet Inc. (Google) 1684497001.5935576
+Error: Failed to analyze Microsoft Corporation 1684497001.59372
+Error: Failed to analyze Tesla, Inc. 1684497001.5938776
+Error: Failed to analyze Advanced Micro Devices, Inc. 1684497001.5940342
+Error: Failed to analyze Intel Corporation 1684497001.5941904
+Error: Failed to analyze Walmart Inc. 1684497001.5943449
+Error: Failed to analyze Salesforce.com, Inc. 1684497001.594517
+Error: Failed to analyze JPMorgan Chase & Co. 1684497001.594673
+Error: Failed to analyze Exxon Mobil Corporation 1684497001.594827
+Error: Failed to analyze Chevron Corporation 1684497001.5949843
+Error: Failed to analyze Raytheon Technologies Corporation 1684497001.5951385
+Error: Failed to analyze UnitedHealth Group Incorporated 1684497001.595293
+Error: Failed to analyze Johnson & Johnson 1684497001.5954626
+Error: Failed to analyze Pfizer Inc. 1684497001.5956612
+Error: Failed to analyze Nike, Inc. 1684497001.595828
+Error: Failed to analyze Berkshire Hathaway Inc. (Class B shares) 1684497001.5959826
+Error: Failed to analyze PayPal Holdings, Inc. 1684497001.5961378
+Error: Failed to analyze Caterpillar Inc. 1684497001.5962949
+Log: Starting Script 1684583401.4089003
+Error: Failed to analyze Five9, Inc. 1684583401.4091809
+Error: Failed to analyze Amazon.com Inc. 1684583401.4093509
+Error: Failed to analyze Meta Platforms Inc. (formerly Facebook Inc.) 1684583401.4095154
+Error: Failed to analyze Alphabet Inc. (Google) 1684583401.40967
+Error: Failed to analyze Microsoft Corporation 1684583401.4098222
+Error: Failed to analyze Tesla, Inc. 1684583401.4099739
+Error: Failed to analyze Advanced Micro Devices, Inc. 1684583401.4101288
+Error: Failed to analyze Intel Corporation 1684583401.4102786
+Error: Failed to analyze Walmart Inc. 1684583401.4104276
+Error: Failed to analyze Salesforce.com, Inc. 1684583401.4105854
+Error: Failed to analyze JPMorgan Chase & Co. 1684583401.4107583
+Error: Failed to analyze Exxon Mobil Corporation 1684583401.410921
+Error: Failed to analyze Chevron Corporation 1684583401.4110749
+Error: Failed to analyze Raytheon Technologies Corporation 1684583401.4112341
+Error: Failed to analyze UnitedHealth Group Incorporated 1684583401.41139
+Error: Failed to analyze Johnson & Johnson 1684583401.4115689
+Error: Failed to analyze Pfizer Inc. 1684583401.411732
+Error: Failed to analyze Nike, Inc. 1684583401.4118807
+Error: Failed to analyze Berkshire Hathaway Inc. (Class B shares) 1684583401.4120374
+Error: Failed to analyze PayPal Holdings, Inc. 1684583401.4121854
+Error: Failed to analyze Caterpillar Inc. 1684583401.412352
+Log: Starting Script 1684602332.4082088
+Error: Failed to analyze Five9, Inc. 1684602332.4090295
+Error: Failed to analyze Amazon.com Inc. 1684602332.4093988
+Error: Failed to analyze Meta Platforms Inc. (formerly Facebook Inc.) 1684602332.409701
+Error: Failed to analyze Alphabet Inc. (Google) 1684602332.4099865
+Error: Failed to analyze Microsoft Corporation 1684602332.41028
+Error: Failed to analyze Tesla, Inc. 1684602332.410568
+Error: Failed to analyze Advanced Micro Devices, Inc. 1684602332.4108565
+Error: Failed to analyze Intel Corporation 1684602332.411144
+Error: Failed to analyze Walmart Inc. 1684602332.4114273
+Error: Failed to analyze Salesforce.com, Inc. 1684602332.4117315
+Error: Failed to analyze JPMorgan Chase & Co. 1684602332.4120164
+Error: Failed to analyze Exxon Mobil Corporation 1684602332.4122984
+Error: Failed to analyze Chevron Corporation 1684602332.412585
+Error: Failed to analyze Raytheon Technologies Corporation 1684602332.412868
+Error: Failed to analyze UnitedHealth Group Incorporated 1684602332.413162
+Error: Failed to analyze Johnson & Johnson 1684602332.41348
+Error: Failed to analyze Pfizer Inc. 1684602332.4137633
+Error: Failed to analyze Nike, Inc. 1684602332.4140816
+Error: Failed to analyze Berkshire Hathaway Inc. (Class B shares) 1684602332.4144154
+Error: Failed to analyze PayPal Holdings, Inc. 1684602332.4146965
+Error: Failed to analyze Caterpillar Inc. 1684602332.4149835
+Log: Starting Script 1684602425.032364
+Error: Failed to analyze Five9, Inc. 1684602439.4364786
