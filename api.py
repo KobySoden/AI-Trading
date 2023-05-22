@@ -38,9 +38,9 @@ def daily_data(ticker):
 
     with open(f"{path}/data/{ticker}/{today.isoformat()}--News.json", "w") as f:
         f.write(json.dumps(get_news(ticker)))
-
-    with open(f"{path}/data/{ticker}/{today.isoformat()}--Price.json", "w") as f:
-        f.write(json.dumps(get_price(ticker)))
+    
+    #with open(f"{path}/data/{ticker}/{today.isoformat()}--Price.json", "w") as f:
+        #f.write(json.dumps(get_price(ticker)))
 
 if __name__ == "__main__":
     #tickers = ["FIVN","AMZN","META","GOOGL","MSFT","TSLA","AMD","INTC","WMT","CRM","JPM","XOM","CVX","RTX","UNH","JNJ","PFE","NKE","BRK-B","PYPL","CAT"]

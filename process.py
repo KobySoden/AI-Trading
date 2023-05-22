@@ -94,7 +94,34 @@ def store_analysis(ticker, score, articles_analyzed, headlines, analyses):
             writer.writerow([timestamp,ticker,today.isoformat(),headline, analyses[headlines.index(headline)]])
 
 if __name__ == "__main__":
-    pass
+    with open (f"{path}/logs/process.txt", "a") as f:
+        f.write(f"Log: Starting Script {time.time()}\n")
+    
+    with open (f"{path}/small-cap-stocks-stocks.csv", "r") as f:
+        reader = csv.reader(f)
+        for row in reader:
+            if row[1] == "Symbol":
+                continue
+            else:
+                print(f"Ticker:{row[1]} Name:{row[2]}")
+                ticker = row[1]
+                name = row[2]
+                file = f"{today.isoformat()}--News.json"
+                print(f"Analyzing {file} ...")
+                with open(f"{path}/data/{ticker}/{file}", "r") as f:
+                    news = json.loads(f.read())
+                    #print(f"{news.__len__()} articles in {dir}/{file}")
+                    try:
+                        score, analyses, headlines = analyze_news(news, name)
+                        print(f"{file} has a score of {score}")
+                        store_analysis(ticker, score, news.__len__(),headlines, analyses)
+                        print(f"Stored analysis for {name}")
+                        with open (f"{path}/logs/process.txt", "a") as f:
+                            f.write(f"Log: Stored analysis for {name} {time.time()}\n")
+                    except:
+                        with open (f"{path}/logs/process.txt", "a") as f:
+                            f.write(f"Error: Failed to analyze {name} {time.time()}\n")
+
 
     """
     ticker_to_company = {"FIVN": "Five9, Inc.",
@@ -119,8 +146,6 @@ if __name__ == "__main__":
     "PYPL": "PayPal Holdings, Inc.",
     "CAT": "Caterpillar Inc."
     }
-    with open (f"{path}/logs/process.txt", "a") as f:
-        f.write(f"Log: Starting Script {time.time()}\n")
     #get all the files in the directory
     #for dir in os.listdir("data"):
     for dir in ticker_to_company.keys():
