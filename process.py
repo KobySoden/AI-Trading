@@ -20,7 +20,7 @@ def response_error_handler(response):
             
 def ask_ai(headline, company_name):
     url = "https://api.openai.com/v1/chat/completions"
-    prompt = f"Forget all your previous instructions. Pretend you are a financial expert. You are a financial expert with stock recommendation experience. Answer “YES” if good news, “NO” if bad news, or “UNKNOWN” if uncertain in the first line. Then elaborate with one short and concise sentence on the next line. Is this headline good or bad for the stock price of {company_name} in the term term?\nHeadline: {headline}"
+    prompt = f"Forget all your previous instructions. Pretend you are a financial expert. You are a financial expert with stock recommendation experience. Answer “YES” if good news, “NO” if bad news, or “UNKNOWN” if uncertain in the first line. Then elaborate with one short and concise sentence on the next line. Is this headline good or bad for the stock price of {company_name} in the short term?\nHeadline: {headline}"
     payload = json.dumps({
     "model": "gpt-3.5-turbo",
     "messages": [{"role": "user", "content": prompt}],
@@ -64,9 +64,9 @@ def analyze_news(news, company_name):
         if analysis is None:
             continue
 
-        if "YES" in analysis:
+        if "YES" in analysis or "GOOD" in analysis:
             score += 1
-        elif "NO" in analysis:
+        elif "NO" in analysis or "BAD" in analysis:
             score -= 1
         else:
             pass
